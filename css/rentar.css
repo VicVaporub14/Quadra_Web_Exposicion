@@ -1,0 +1,481 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(39, 39, 39);
+}
+
+h2 {
+    margin: 0 auto;
+    width: 700px;
+    padding: 40px 0;
+    font-size: 34px;
+    font-weight: 800;
+    text-align: center;
+}
+
+
+h3 {
+    margin-bottom: 15px;
+}
+
+
+.index {
+    height: 25px;
+    background-color: rgb(29, 29, 29);
+}
+
+
+.bar-sup {
+    height: 25px;
+    background-color: rgb(29, 29, 29);
+}
+
+/* Barra de navegación */
+nav {
+    height: 100px;
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+}
+    
+nav a img {
+    /* width: 265px; 
+    max-width: 100%;
+    height: auto; */
+    
+    height: 100%;                     /* El logo tendrá el 100% de la altura del contenedor */
+    max-height: 100px;                 /* Máxima altura del logo para mantenerlo dentro de un rango razonable */
+    width: auto; 
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    gap: 50px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+ul li {
+    position: relative;
+}
+
+    
+    
+/* Enlaces de la barra de navegación */
+ul li a {
+    display: block;
+    text-decoration: none;
+    color: rgb(53, 53, 53);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 750;
+    padding: 15px 30px;
+    border-bottom: 2.5px solid transparent; /* Borde transparente inicialmente */
+    transition: border-color 0.3s ease;
+}
+
+/* Estilo del enlace cuando pasas el ratón (solo en el enlace, no el dropdown) */
+ul li:hover > a {
+    color: rgb(0, 84, 209);
+    border-bottom-color: rgb(0, 84, 209);
+}
+
+/* Activa el enlace actual */
+.links a.active {
+    color: rgb(0, 84, 209);
+    border-bottom-color: rgb(0, 84, 209);
+}
+
+
+
+/* Menú desplegable */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    min-width: 180px;
+    list-style-type: none;
+    box-shadow: 0px 11px 17px -2px rgba(0,0,0,0.67);
+}
+
+.dropdown-menu li a {
+    /* padding: 10px; */
+    text-decoration: none;
+    color: rgb(53, 53, 53);
+}
+
+/* Estilo del enlace en el menú desplegable */
+.dropdown-menu li a:hover {
+    color: white;
+    background-color: rgb(94, 179, 248); /* Fondo azul cuando el ratón pasa por encima */
+    border-bottom: none; /* Sin borde inferior en el hover */
+    transition: none; /* Sin transición */
+}
+
+/* Mostrar el menú al hacer hover sobre el elemento del menú */
+.dropdown:hover .dropdown-menu {
+    display: block;
+    background-color: white; /* Fondo azul cuando el menú se despliega */
+}
+
+/* Ajustar el estilo de los enlaces de la barra de navegación cuando el menú desplegable está visible */
+.dropdown:hover > a {
+    color: rgb(53, 53, 53); /* Color normal para el enlace de la barra de navegación */
+    border-bottom: none; /* Eliminar el borde del enlace */
+}
+
+/* Estilo de los enlaces de la barra de navegación al estar dentro del dropdown-menu */
+.dropdown:hover > a,
+.dropdown-menu li a {
+    border-bottom: none; /* Sin borde inferior en los enlaces del menú desplegable */
+    transition: none; /* Sin transición */
+}
+
+/* Solo aplicar fondo azul cuando el ratón pasa por encima de los enlaces dentro del dropdown */
+.dropdown-menu li a:hover {
+    color: white;
+    background-color: rgb(22, 135, 228); /* Fondo azul al pasar el ratón */
+    border-bottom: none; /* Sin borde inferior */
+    transition: none; /* Sin transición */
+}
+
+/* Hero */
+
+.hero {
+    background-image: url('../imgs/heros/hero-6.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 250px;
+    transition: background-image 2s ease-in-out;
+}
+
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+    background-color: rgba(0, 0, 0, 0.6);
+    
+}
+
+
+
+
+
+
+/* Estilos para la barra de filtro */
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.filter-bar .filter-group {
+    display: flex;
+    flex-direction: column; 
+    margin: 0 10px;
+    min-width: 200px; 
+}
+
+.filter-bar label {
+    margin-bottom: 10px;  
+    font-weight: bold;  
+    color: white;        
+}
+
+.filter-bar select {
+    padding: 8px;
+    font-size: 14px;
+    width: 100%; 
+}
+
+#filter-button {
+    background-color: #0C8AC7;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-top: 27px;
+    border-radius: 5px;
+}
+
+#filter-button:hover {
+    background-color: #0A678F;
+}
+
+/* Estilo para el mensaje de no resultados */
+#no-results-message {
+    display: none; /* Oculto por defecto */
+    background-color: #FF6347; /* Fondo rojo (tomato) para llamar la atención */
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+
+
+
+
+/* Autos */
+
+.autos {
+    background-color: rgb(231, 246, 253);
+}
+
+
+
+/* Auto Container Styles */
+.auto-container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 40px;
+    padding-bottom: 70px;
+}
+
+.auto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+/* Stats Styles */
+.stats {
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    gap: 5px;
+    align-items: center;
+
+}
+
+/* Button Styles */
+.button-container {
+    background-color: #0C8AC7;
+    color: #DFECF2;
+    border: none;
+    cursor: pointer;
+    padding: 8px 15px ;
+    border-radius: 5px;
+
+}
+
+.button-container:hover {
+    background-color: #0A678F;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contenedor {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.contenido-servicios {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+.cards-servicios {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 80px;
+
+    
+    
+}
+
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    width: 350px;
+    height: 350px;
+    align-content: center;
+    padding: 30px 40px;
+
+    -webkit-box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.4);
+}
+
+.card img {
+    margin-bottom: 30px;
+}
+
+.card p {
+    line-height: 25px;
+    margin: 30px 30px ;
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+footer {
+    background-color: rgb(29, 29, 29);
+    color: white;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.footer > div {
+    flex: 1;
+    margin: 30px;
+}
+
+.contacto-foot {
+    text-align: center;  /* Centra horizontalmente el texto o los elementos del div */
+    align-content: center;  /* Centra verticalmente los elementos */
+}
+
+
+.contacto-foot img {
+    max-width: 100%;
+    height: 200px;
+}
+
+.contacto-foot h3 {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.contacto-foot p {
+    line-height: 25px;
+    margin: 10px 0;
+}
+
+.nav-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.nav-footer a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.nav-footer a:hover {
+    color: rgb(65, 163, 255);
+}
+
+
+.mapa h3{
+    margin-bottom: 20px;
+}
+
+/* final */
+.copyright {
+    color: white;
+    height: 60px;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.copyright p {
+    align-content: center;
+}
+
+.copyright div {
+    align-content: center;
+}
+
+
+.redes-sociales-footer {
+    height: 50px;
+    display: flex;
+    
+    gap: 20px;
+}
+
+.redes-sociales-footer a {
+    align-content: center;
+}
+
+
+
+/* Fecha y Hora */
+#fechaHora {
+    position: fixed;
+    bottom: 10px;     
+    right: 10px;       
+    background-color: rgba(0, 114, 221, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+#contadorVisitas {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 114, 221, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+  }
+
+

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quadra</title>
+
+    <link rel="icon" href="imgs/logos/logo-1.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/rentar.css">
+</head>
+
+<body>
+    <div class="bar-sup">
+
+    </div>
+    <header>
+        <nav>
+            <a href="index.html">
+              <img src="imgs/logos/logo_2.png" alt="logo">
+            </a>
+            <ul class="links">
+                <li class="dropdown">
+                    <a href="index.html">Inicio</a>
+                    <ul class="dropdown-menu">
+                      <li><a href=".servicios">Servicios</a></li>
+                      <li><a href=".beneficios">Beneficios</a></li>
+                      <li><a href=".contacto">Contacto</a></li>
+                    </ul>
+                </li>
+                <li><a href="rentar.html">Rentar</a></li>
+                <li><a href="reservar.html">Reservar</a></li>
+                <li><a href="marcas.html">Marcas</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="oficinas.html">Oficinas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero --> 
+    <section class="hero">
+        <div class="overlay">
+            <div class="filter-bar">
+                <!-- Filtro de tipo de auto -->
+                <div class="filter-group">
+                    <label for="filter-type">Tipo de auto:</label>
+                    <select id="filter-type">
+                        <option value="">Selecciona un tipo</option>
+                        <option value="economy">Económico</option>
+                        <option value="suv">SUV</option>
+                        <option value="compact">Compacto</option>
+                        <option value="luxury">Lujo</option>
+                    </select>
+                </div>
+            
+                <!-- Filtro de cantidad de pasajeros -->
+                <div class="filter-group">
+                    <label for="filter-passengers">Cantidad de pasajeros:</label>
+                    <select id="filter-passengers">
+                        <option value="">Selecciona cantidad</option>
+                        <option value="2">2</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="7">7+</option>
+                    </select>
+                </div>
+            
+                <!-- Filtro de cantidad de maletas -->
+                <div class="filter-group">
+                    <label for="filter-luggage">Cantidad de maletas:</label>
+                    <select id="filter-luggage">
+                        <option value="">Selecciona cantidad</option>
+                        <option value="2">2</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6+</option>
+                    </select>
+                </div>
+            
+                <button id="filter-button">Filtrar</button>
+            </div>
+            
+        </div>
+    </section>
+
+
+
+    <section class="autos">
+        <div class="contenedor">
+            <h2>Vehiculos</h2>
+
+            <div id="no-results-message">
+                No existe un auto con estas especificaciones.
+            </div>
+
+            <div class="auto-container">
+
+                <div class="auto" data-type="economy" data-passengers="4" data-luggage="2">
+                    <img style="float: right;" src="imgs/carros/02_economy_red.png" width="200" height="150" alt="Nissan Tiida">
+                    <h3>Nissan Tiida</h3>
+                    <div class="stats">
+                        <button class="button-container" style=" align-items: flex-start;">Rentar</button>
+                        <div title="4 adultos" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/usuario.png" width="15" height="15" alt=""> 4
+                        </div>
+                        <div title="2 maletas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/equipaje.png" width="15" height="15" alt=""> 2
+                        </div>
+                        <div title="4-5 puertas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/puerta-de-coche.png" width="15" height="15" alt=""> 4-5
+                        </div>
+                        <div title="Manual" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/transmision-manual.png" width="15" height="15" alt=""> M
+                        </div>
+                    </div>
+                </div>
+
+                <div class="auto" data-type="economy" data-passengers="4" data-luggage="3">
+                    <img style="float: right;" src="imgs/carros/02_economy_white (1).png" width="200" height="150" alt="Chevrolet Aveo">
+                    <h3>Chevrolet Aveo</h3>
+                    <div class="stats">
+                        <button class="button-container" style=" align-items: flex-start;">Rentar</button>
+                        <div title="4 adultos" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/usuario.png" width="15" height="15" alt=""> 4
+                        </div>
+                        <div title="3 maletas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/equipaje.png" width="15" height="15" alt=""> 3
+                        </div>
+                        <div title="4-5 puertas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/puerta-de-coche.png" width="15" height="15" alt=""> 4-5
+                        </div>
+                        <div title="Manual" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/transmision-manual.png" width="15" height="15" alt=""> M
+                        </div>
+                    </div>
+                </div>
+
+                <div class="auto" data-type="economy" data-passengers="2" data-luggage="2">
+                    <img style="float: right;" src="imgs/carros/ford-fiesta-Photoroom.png" width="200" height="150" alt="Ford Fiesta">
+                    <h3>Ford Fiesta</h3>
+                    <div class="stats">
+                        <button class="button-container" style=" align-items: flex-start;">Rentar</button>
+                        <div title="2 adultos" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/usuario.png" width="15" height="15" alt=""> 2
+                        </div>
+                        <div title="2 maletas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/equipaje.png" width="15" height="15" alt=""> 2
+                        </div>
+                        <div title="4 puertas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/puerta-de-coche.png" width="15" height="15" alt=""> 4
+                        </div>
+                        <div title="Manual" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/transmision-manual.png" width="15" height="15" alt=""> M
+                        </div>
+                    </div>
+                </div>
+
+                <div class="auto" data-type="economy" data-passengers="4" data-luggage="3">
+                    <img style="float: right;" src="imgs/carros/hyundai-accent.png" width="200" height="150" alt="Hyundai Accent">
+                    <h3>Hyundai Accent</h3>
+                    <div class="stats">
+                        <button class="button-container" style=" align-items: flex-start;">Rentar</button>
+                        <div title="4 adultos" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/usuario.png" width="15" height="15" alt=""> 4
+                        </div>
+                        <div title="3 maletas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/equipaje.png" width="15" height="15" alt=""> 3
+                        </div>
+                        <div title="4-5 puertas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/puerta-de-coche.png" width="15" height="15" alt=""> 4-5
+                        </div>
+                        <div title="Manual" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/transmision-manual.png" width="15" height="15" alt=""> M
+                        </div>
+                    </div>
+                </div>
+
+                <div class="auto" data-type="economy" data-passengers="2" data-luggage="2">
+                    <img style="float: right;" src="imgs/carros/kia-rio-Photoroom.png" width="200" height="150" alt="Kia Rio">
+                    <h3>Kia Rio</h3>
+                    <div class="stats">
+                        <button class="button-container" style=" align-items: flex-start;">Rentar</button>
+                        <div title="2 adultos" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/usuario.png" width="15" height="15" alt=""> 2
+                        </div>
+                        <div title="2 maletas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/equipaje.png" width="15" height="15" alt=""> 2
+                        </div>
+                        <div title="4 puertas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/puerta-de-coche.png" width="15" height="15" alt=""> 4
+                        </div>
+                        <div title="Manual" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/transmision-manual.png" width="15" height="15" alt=""> M
+                        </div>
+                    </div>
+                </div>
+
+                
+                <!-- Auto SUV -->
+                <div class="auto" data-type="suv" data-passengers="7" data-luggage="5">
+                    <img style="float: right;" src="imgs/carros/TOYOTA-LAND-CRUISER.png" width="200" height="150" alt="Toyota Land Cruiser">
+                    <h3>Toyota Land Cruiser</h3>
+                    <div class="stats">
+                        <button class="button-container" style=" align-items: flex-start;">Rentar</button>
+                        <div title="7 adultos" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/usuario.png" width="15" height="15" alt=""> 7
+                        </div>
+                        <div title="5 maletas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/equipaje.png" width="15" height="15" alt=""> 5
+                        </div>
+                        <div title="5 puertas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/puerta-de-coche.png" width="15" height="15" alt=""> 5
+                        </div>
+                        <div title="Automático" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/transmision-manual.png" width="15" height="15" alt=""> A
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="auto" data-type="suv" data-passengers="5" data-luggage="4">
+                    <img style="float: right;" src="imgs/carros/Honda-CR-V.png" width="200" height="150" alt="Honda CR-V">
+                    <h3>Honda CR-V</h3>
+                    <div class="stats">
+                        <button class="button-container" style=" align-items: flex-start;">Rentar</button>
+                        <div title="5 adultos" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/usuario.png" width="15" height="15" alt=""> 5
+                        </div>
+                        <div title="4 maletas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/equipaje.png" width="15" height="15" alt=""> 4
+                        </div>
+                        <div title="5 puertas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/puerta-de-coche.png" width="15" height="15" alt=""> 5
+                        </div>
+                        <div title="Automático" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/transmision-manual.png" width="15" height="15" alt=""> A
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="auto" data-type="suv" data-passengers="7" data-luggage="6">
+                    <img style="float: right;" src="imgs/carros/Ford_Expedition.png" width="200" height="150" alt="Ford Expedition">
+                    <h3>Ford Expedition</h3>
+                    <div class="stats">
+                        <button class="button-container" style=" align-items: flex-start;">Rentar</button>
+                        <div title="7 adultos" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/usuario.png" width="15" height="15" alt=""> 7
+                        </div>
+                        <div title="6 maletas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/equipaje.png" width="15" height="15" alt=""> 6
+                        </div>
+                        <div title="5 puertas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/puerta-de-coche.png" width="15" height="15" alt=""> 5
+                        </div>
+                        <div title="Automático" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/transmision-manual.png" width="15" height="15" alt=""> A
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="auto" data-type="suv" data-passengers="5" data-luggage="4">
+                    <img style="float: right;" src="imgs/carros/chevrolet-tahoe-Photoroom.png" width="200" height="150" alt="Chevrolet Tahoe">
+                    <h3>Chevrolet Tahoe</h3>
+                    <div class="stats">
+                        <button class="button-container" style=" align-items: flex-start;">Rentar</button>
+                        <div title="5 adultos" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/usuario.png" width="15" height="15" alt=""> 5
+                        </div>
+                        <div title="4 maletas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/equipaje.png" width="15" height="15" alt=""> 4
+                        </div>
+                        <div title="5 puertas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/puerta-de-coche.png" width="15" height="15" alt=""> 5
+                        </div>
+                        <div title="Automático" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/transmision-manual.png" width="15" height="15" alt=""> A
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="auto" data-type="suv" data-passengers="7" data-luggage="5">
+                    <img style="float: right;" src="imgs/carros/Nissan-pathfinder.png" width="200" height="150" alt="Nissan Pathfinder">
+                    <h3>Nissan Pathfinder</h3>
+                    <div class="stats">
+                        <button class="button-container" style=" align-items: flex-start;">Rentar</button>
+                        <div title="7 adultos" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/usuario.png" width="15" height="15" alt=""> 7
+                        </div>
+                        <div title="5 maletas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/equipaje.png" width="15" height="15" alt=""> 5
+                        </div>
+                        <div title="5 puertas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/puerta-de-coche.png" width="15" height="15" alt=""> 5
+                        </div>
+                        <div title="Automático" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/transmision-manual.png" width="15" height="15" alt=""> A
+                        </div>
+                    </div>
+                </div>        
+
+                <!-- Auto Compacto -->
+                <div class="auto" data-type="compact" data-passengers="5" data-luggage="3">
+                    <img style="float: right;" src="imgs/carros/02_economy_white (1).png" width="200" height="150" alt="Honda Civic">
+                    <h3>Honda Civic</h3>
+                    <div class="stats">
+                        <button class="button-container" style=" align-items: flex-start;">Rentar</button>
+                        <div title="5 adultos" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/usuario.png" width="15" height="15" alt=""> 5
+                        </div>
+                        <div title="3 maletas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/equipaje.png" width="15" height="15" alt=""> 3
+                        </div>
+                        <div title="4-5 puertas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/puerta-de-coche.png" width="15" height="15" alt=""> 4-5
+                        </div>
+                        <div title="Automático" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/transmision-manual.png" width="15" height="15" alt=""> A
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="auto" data-type="compact" data-passengers="4" data-luggage="2">
+                    <img style="float: right;" src="imgs/carros/mazda-3.png" width="200" height="150" alt="Mazda 3">
+                    <h3>Mazda 3</h3>
+                    <div class="stats">
+                        <button class="button-container" style=" align-items: flex-start;">Rentar</button>
+                        <div title="4 adultos" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/usuario.png" width="15" height="15" alt=""> 4
+                        </div>
+                        <div title="2 maletas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/equipaje.png" width="15" height="15" alt=""> 2
+                        </div>
+                        <div title="4 puertas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/puerta-de-coche.png" width="15" height="15" alt=""> 4
+                        </div>
+                        <div title="Manual" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/transmision-manual.png" width="15" height="15" alt=""> M
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="auto" data-type="compact" data-passengers="5" data-luggage="2">
+                    <img style="float: right;" src="imgs/carros/Toyota-Corolla.png" width="200" height="150" alt="Toyota Corolla">
+                    <h3>Toyota Corolla</h3>
+                    <div class="stats">
+                        <button class="button-container" style=" align-items: flex-start;">Rentar</button>
+                        <div title="5 adultos" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/usuario.png" width="15" height="15" alt=""> 5
+                        </div>
+                        <div title="2 maletas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/equipaje.png" width="15" height="15" alt=""> 2
+                        </div>
+                        <div title="4 puertas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/puerta-de-coche.png" width="15" height="15" alt=""> 4
+                        </div>
+                        <div title="Automático" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/transmision-manual.png" width="15" height="15" alt=""> A
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="auto" data-type="compact" data-passengers="5" data-luggage="3">
+                    <img style="float: right;" src="imgs/carros/Volkswagen-Golf.png" width="200" height="150" alt="Volkswagen Golf">
+                    <h3>Volkswagen Golf</h3>
+                    <div class="stats">
+                        <button class="button-container" style=" align-items: flex-start;">Rentar</button>
+                        <div title="5 adultos" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/usuario.png" width="15" height="15" alt=""> 5
+                        </div>
+                        <div title="3 maletas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/equipaje.png" width="15" height="15" alt=""> 3
+                        </div>
+                        <div title="4-5 puertas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/puerta-de-coche.png" width="15" height="15" alt=""> 4-5
+                        </div>
+                        <div title="Automático" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/transmision-manual.png" width="15" height="15" alt=""> A
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="auto" data-type="compact" data-passengers="4" data-luggage="2">
+                    <img style="float: right;" src="imgs/carros/Ford-focus.png" width="200" height="150" alt="Ford Focus">
+                    <h3>Ford Focus</h3>
+                    <div class="stats">
+                        <button class="button-container" style=" align-items: flex-start;">Rentar</button>
+                        <div title="4 adultos" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/usuario.png" width="15" height="15" alt=""> 4
+                        </div>
+                        <div title="2 maletas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/equipaje.png" width="15" height="15" alt=""> 2
+                        </div>
+                        <div title="4 puertas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/puerta-de-coche.png" width="15" height="15" alt=""> 4
+                        </div>
+                        <div title="Manual" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/transmision-manual.png" width="15" height="15" alt=""> M
+                        </div>
+                    </div>
+                </div>        
+
+                <!-- Auto de Lujo -->
+                <div class="auto" data-type="luxury" data-passengers="5" data-luggage="4">
+                    <img style="float: right;" src="imgs/carros/Mercedes-Benz E-Class.png" width="200" height="150" alt="Mercedes-Benz E-Class">
+                    <h3>Mercedes E-Class</h3>
+                    <div class="stats">
+                        <button class="button-container" style=" align-items: flex-start;">Rentar</button>
+                        <div title="5 adultos" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/usuario.png" width="15" height="15" alt=""> 5
+                        </div>
+                        <div title="4 maletas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/equipaje.png" width="15" height="15" alt=""> 4
+                        </div>
+                        <div title="4-5 puertas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/puerta-de-coche.png" width="15" height="15" alt=""> 4-5
+                        </div>
+                        <div title="Automático" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/transmision-manual.png" width="15" height="15" alt=""> A
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="auto" data-type="luxury" data-passengers="5" data-luggage="4">
+                    <img style="float: right;" src="imgs/carros/BMW-Serie-5.png" width="200" height="150" alt="BMW 5 Series">
+                    <h3>BMW 5 Series</h3>
+                    <div class="stats">
+                        <button class="button-container" style=" align-items: flex-start;">Rentar</button>
+                        <div title="5 adultos" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/usuario.png" width="15" height="15" alt=""> 5
+                        </div>
+                        <div title="4 maletas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/equipaje.png" width="15" height="15" alt=""> 4
+                        </div>
+                        <div title="4-5 puertas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/puerta-de-coche.png" width="15" height="15" alt=""> 4-5
+                        </div>
+                        <div title="Automático" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/transmision-manual.png" width="15" height="15" alt=""> A
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="auto" data-type="luxury" data-passengers="4" data-luggage="3">
+                    <img style="float: right;" src="imgs/carros/Audi-A6.png" width="200" height="150" alt="Audi A6">
+                    <h3>Audi A6</h3>
+                    <div class="stats">
+                        <button class="button-container" style=" align-items: flex-start;">Rentar</button>
+                        <div title="4 adultos" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/usuario.png" width="15" height="15" alt=""> 4
+                        </div>
+                        <div title="3 maletas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/equipaje.png" width="15" height="15" alt=""> 3
+                        </div>
+                        <div title="4 puertas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/puerta-de-coche.png" width="15" height="15" alt=""> 4
+                        </div>
+                        <div title="Automático" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/transmision-manual.png" width="15" height="15" alt=""> A
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="auto" data-type="luxury" data-passengers="4" data-luggage="4">
+                    <img style="float: right;" src="imgs/carros/Lexus-RX.png" width="200" height="150" alt="Lexus RX">
+                    <h3>Lexus RX</h3>
+                    <div class="stats">
+                        <button class="button-container" style=" align-items: flex-start;">Rentar</button>
+                        <div title="4 adultos" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/usuario.png" width="15" height="15" alt=""> 4
+                        </div>
+                        <div title="4 maletas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/equipaje.png" width="15" height="15" alt=""> 4
+                        </div>
+                        <div title="4 puertas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/puerta-de-coche.png" width="15" height="15" alt=""> 4
+                        </div>
+                        <div title="Automático" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/transmision-manual.png" width="15" height="15" alt=""> A
+                        </div>
+                    </div>
+                </div>
+
+                <div class="auto" data-type="luxury" data-passengers="5" data-luggage="3">
+                    <img style="float: right;" src="imgs/carros/Jaguar-XF.png" width="200" height="150" alt="Jaguar XF">
+                    <h3>Jaguar XF</h3>
+                    <div class="stats">
+                        <button class="button-container" style=" align-items: flex-start;">Rentar</button>
+                        <div title="5 adultos" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/usuario.png" width="15" height="15" alt=""> 5
+                        </div>
+                        <div title="3 maletas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/equipaje.png" width="15" height="15" alt=""> 3
+                        </div>
+                        <div title="4-5 puertas" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/puerta-de-coche.png" width="15" height="15" alt=""> 4-5
+                        </div>
+                        <div title="Automático" style="justify-content: space-around;">
+                            <img src="imgs/carros/iconos-carros/transmision-manual.png" width="15" height="15" alt=""> A
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>        
+        </div>
+
+
+    </section>
+
+
+    <div id="fechaHora"></div>
+
+    <div id="contadorVisitas"></div>
+
+    <footer>
+        <div class="footer">
+            <div class="contacto-foot">
+                <img src="imgs/logos/logo-1.png" alt="logo">
+                <h3>Contacto</h3>
+                <h4>Telefonos</h4>
+                <p>8713506842</p>
+                <p>8153452466</p>
+            </div>
+
+            <div>
+                <div class="nav-footer">
+                    <a href="index.html">Inicio</a>
+                    <a href="#">Servicios</a>
+                    <a href="#">Nosotros</a>
+                    <a href="#">Contacto</a>
+                </div>
+            </div>
+
+            <div class="mapa">
+                <h3>Oficinas Centrales</h3>
+                <div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4945.7813033699795!2d-103.53023362633054!3d25.5493296422658!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x868fd87de173db69%3A0x87065b2a1a823d00!2sTecNM%20-%20Campus%20Lerdo!5e0!3m2!1ses!2smx!4v1731287013308!5m2!1ses!2smx" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <h4>Si tienes dudas o sugerencias, comunicate con nosotros!</h4>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        <p>Copyright © 2024 - QUADRA Car Rental</p>
+        <div class="redes-sociales-footer">
+            <a href="#"><img src="imgs/iconos/redes sociales/facebook2.png" alt="facebook"></a>
+            <a href=""><img src="imgs/iconos/redes sociales/instagram.png" alt="instagram"></a>
+            <a href=""><img src="imgs/iconos/redes sociales/whatsapp.png" alt="whatsapp"></a>
+            <a href=""><img src="imgs/iconos/redes sociales/x.png" alt="x"></a>
+        </div>
+    </div>
+
+    <script src="js/enlaceActual.js"></script>
+
+    <script src="js/rentar/filtrar.js"></script>
+    <script src="js/cambiarHero.js"></script>
+    <script src="js/contarVisitas.js"></script>
+    <script src="js/fechaHora.js"></script>
+
+</body>
+</html>
