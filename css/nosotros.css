@@ -137,6 +137,128 @@ ul li:hover > a {
     border-bottom: none; /* Sin borde inferior */
     transition: none; /* Sin transición */
 }
+
+
+
+
+/* Barra de navegacion resposive */ 
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 1250px) {
+    nav {
+        height: 100px;
+        padding: 5px 0;
+        display: flex;
+        justify-content:space-between;
+        background-color: white;
+    }
+
+    .logo {
+        margin-left: 20px;
+    }
+
+    nav button {
+        margin-right: 20px;
+    }
+
+    .links {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 250px;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding-top: 60px;
+        box-shadow: -5px 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .links.active {
+        display: flex;
+    }
+
+    .links li {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .links li a {
+        color: white;
+    }
+
+    ul li:hover > a {
+        color: rgb(94, 179, 248);
+        border-bottom-color: rgb(94, 179, 248);
+    }
+
+    .links a.active {
+        color: rgb(94, 179, 248);
+        border-bottom-color: rgb(94, 179, 248);
+    }
+
+    .dropdown:hover > a {
+        color: rgb(94, 179, 248); /* Color normal para el enlace de la barra de navegación */
+        
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: -40%;
+        background-color: rgb(255, 255, 255);
+        color: gray;
+        min-width: 180px;
+        list-style-type: none;
+        box-shadow: 0px 11px 17px -2px rgba(0,0,0,0.67);
+        z-index: 10;
+    }
+    
+    .dropdown-menu li{
+        margin: 0;
+        
+    }
+
+    .dropdown-menu li a {
+        color: white;
+        background-color: rgb(94, 179, 248); /* Fondo azul cuando el ratón pasa por encima */
+        
+    }
+
+    .dropdown-menu li a:hover {
+        color: white;
+        background-color: rgb(52, 164, 255); /* Fondo azul cuando el ratón pasa por encima */
+        border-bottom: none; /* Sin borde inferior en el hover */
+        transition: none; /* Sin transición */
+    }
+
+    
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-icon.active {
+        transform: rotate(45deg);
+    }
+
+    .menu-icon.active::before {
+        transform: rotate(-90deg) translate(-8px, 8px);
+    }
+
+    .menu-icon.active::after {
+        transform: rotate(-90deg) translate(-8px, -8px);
+    }
+}
+
     
 
 

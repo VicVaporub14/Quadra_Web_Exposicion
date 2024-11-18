@@ -13,7 +13,7 @@ body {
 
 h2 {
     margin: 0 auto;
-    width: 900px;
+    max-width: 900px;
     padding: 40px 0;
     font-size: 44px;
     font-weight: 700;
@@ -371,7 +371,7 @@ ul li:hover > a {
 }
 
 .contenedor {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -379,6 +379,8 @@ ul li:hover > a {
     text-align: center;
     padding-top: 40px;
     padding-bottom: 80px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .cards-servicios {
@@ -386,22 +388,16 @@ ul li:hover > a {
     flex-direction: row;
     justify-content: space-between;
     margin-top: 80px;
-
-    
-    
 }
 
 
 .card {
     background-color: white;
     border-radius: 10px;
-    width: 350px;
+    max-width: 350px;
     height: 350px;
     align-content: center;
     padding: 30px 40px;
-
-    -webkit-box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.4);
-    -moz-box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.4);
     box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.4);
 }
 
@@ -417,10 +413,47 @@ ul li:hover > a {
 
 
 
+@media (max-width: 1215px) {
+    .card {
+        background-color: white;
+        border-radius: 10px;
+        max-width: 300px;
+        height: 350px;
+        align-content: center;
+        padding: 30px 40px;
+        box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.4);
+    }
+}
+
+@media (max-width: 1040px) {
+    .cards-servicios {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 40px;
+        align-items: center;
+        margin-top: 80px;
+    }
+
+    .card {
+        max-width: 350px;
+    }
+}
+
+
+
 /* Beneficios */
 
 .beneficios {
     padding: 30px 0;
+}
+
+.contenido-beneficios {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 80px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .columnas {
@@ -432,7 +465,7 @@ ul li:hover > a {
 }
 
 .caract-benef {
-    width: 500px;
+    max-width: 500px;
     display: flex; 
     flex-direction: column;
     justify-content: center;
@@ -456,6 +489,31 @@ ul li:hover > a {
     align-content: center;
 }
 
+@media (max-width: 1024px) {
+    .columnas {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+        margin: 0;
+    }
+
+    .icono-h3 {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .caract-benef{
+        margin-top: 30px;
+    }
+
+    .caract-benef p {
+        line-height: 25px;
+        margin: 30px 20px;
+    }
+}
+
 
 
 /* Llamada a la accion */
@@ -466,10 +524,13 @@ ul li:hover > a {
 }
 
 .contenido-accion {
+    max-width: 1200px;
     background-color: white;
     padding: 70px 50px ;
     text-align: center;
     border-radius: 10px;
+    margin: 0 40px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 25px 2px;
 }
 
 .contenido-accion p {
@@ -488,13 +549,15 @@ ul li:hover > a {
 
 /* Formulario Contacto */
 
+
+
 .formulario {
     background-color: gray;
-    width: min(60rem,100%);  /* Utilizar el valor mas pequeño */
-    margin: 80px auto ;
-    margin-top: 0;
+    max-width: min(60rem,100%);  /* Utilizar el valor mas pequeño */
+    margin: 0 auto ;
     border-radius: 1rem;
     padding: 2rem;
+    margin-bottom: 70px;
 }
 
 .formulario legend {
@@ -558,6 +621,13 @@ ul li:hover > a {
     color: white;
 }
 
+
+@media (max-width: 1080px) {
+    .formulario {
+        margin: 0 40px;
+        margin-bottom: 70px;
+    }
+}
 
 
 
@@ -626,6 +696,36 @@ footer {
 .mapa h3{
     margin-bottom: 20px;
 }
+
+.mapa h4{
+    margin-top: 20px;
+}
+
+
+@media (max-width: 1024px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contacto-foot {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .nav-footer {
+        margin: 0;
+    }
+
+    .mapa {
+        text-align: center;
+    }
+
+}
+
+
+
 
 /* final */
 .copyright {
