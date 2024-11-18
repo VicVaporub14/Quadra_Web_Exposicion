@@ -160,16 +160,6 @@ ul li:hover > a {
     cursor: pointer;
 }
 
-.menu-icon {
-    width: 25px;
-    height: 3px;
-    background-color: black;
-    position: relative;
-    transition: transform 0.3s;
-}
-
-
-
 /* Responsive Styles */
 @media (max-width: 1250px) {
     nav {
