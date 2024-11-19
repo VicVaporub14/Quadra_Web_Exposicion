@@ -4,11 +4,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function navegacionFija() {
     const header = document.querySelector('header');
-    const servicios = document.querySelector('.servicios');
+    const hero = document.querySelector('.hero');
 
     document.addEventListener('scroll', function() {
         console.log();
-        if (servicios.getBoundingClientRect().top < 1) {
+        if (hero.getBoundingClientRect().bottom < 1) {
             header.classList.add('fixed');
         } else {
             header.classList.remove('fixed');
