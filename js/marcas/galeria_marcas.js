@@ -3,7 +3,7 @@ const prevButton = document.getElementById('prev');
 const nextButton = document.getElementById('next');
 
 let currentIndex = 0;
-const cardsToShow = 3; // Número de tarjetas visibles
+const cardsToShow = 1; // Número de tarjetas visibles
 const cardWidth = 270; // Ancho de cada tarjeta + márgenes (ajusta según el diseño)
 
 nextButton.addEventListener('click', () => {

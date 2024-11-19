@@ -13,7 +13,7 @@ body {
 
 h2 {
     margin: 0 auto;
-    width: 900px;
+    max-width: 900px;
     padding: 40px 0;
     font-size: 44px;
     font-weight: 700;
@@ -304,6 +304,12 @@ ul li:hover > a {
 
 
 
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
 
 
 /* Formulario Contacto */
@@ -317,6 +323,14 @@ ul li:hover > a {
     padding: 2rem;
 }
 
+
+@media (max-width: 1040px) {
+    .contenedor {
+        padding: 0 40px;
+    }
+}
+
+
 .formulario legend {
     text-align: center;
     color: white;
@@ -329,7 +343,7 @@ ul li:hover > a {
     border: none;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 600px) {
     .contenedor-campos {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -409,8 +423,8 @@ footer {
 
 
 .contacto-foot img {
-    max-width: 100%;
-    height: 200px;
+    width: 220px;
+    height: 220px;
 }
 
 .contacto-foot h3 {
@@ -443,19 +457,70 @@ footer {
     color: rgb(65, 163, 255);
 }
 
+.mapa {
+    align-content: center;
+}
 
 .mapa h3{
     margin-bottom: 20px;
 }
 
+.mapa h4{
+    margin-top: 20px;
+}
+
+
+@media (max-width: 1024px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contacto-foot {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .nav-footer {
+        margin: 0;
+    }
+
+    .mapa {
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .contacto-foot {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+    }
+
+}
+
+@media (max-width: 488px) {
+    .mapa-img iframe {
+        width: 300px;
+    }
+}
+
+
+
+
 /* final */
 .copyright {
     color: white;
-    height: 60px;
+    height: auto;
     background-color: black;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-content: center;
+    padding: 15px 0;
 }
 
 .copyright p {
@@ -468,14 +533,25 @@ footer {
 
 
 .redes-sociales-footer {
-    height: 50px;
     display: flex;
-    
-    gap: 20px;
+    gap: 15px;
 }
 
 .redes-sociales-footer a {
     align-content: center;
+}
+
+@media (max-width: 560px) {
+    .copyright {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    #fechaHora {
+        display: none;
+    }
 }
 
 
@@ -492,6 +568,12 @@ footer {
     font-family: Arial, sans-serif;
 }
 
+@media (max-width: 1500px) {
+    #fechaHora {
+        display: none;
+    }
+}
+
 #contadorVisitas {
     position: fixed;
     bottom: 10px;
@@ -502,5 +584,4 @@ footer {
     border-radius: 5px;
     font-family: Arial, sans-serif;
   }
-
 
